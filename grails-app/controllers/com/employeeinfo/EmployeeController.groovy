@@ -1,4 +1,4 @@
-package com.employeeinfo.entity
+package com.employeeinfo
 
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*

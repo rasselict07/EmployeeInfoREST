@@ -1,4 +1,4 @@
-package com.employeeinfo.entity
+package com.employeeinfo
 
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification

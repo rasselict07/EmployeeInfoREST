@@ -1,4 +1,4 @@
-import com.employeeinfo.entity.Employee
+import com.employeeinfo.Employee
 
 model {
 	Iterable<Employee> employeeList

@@ -1,10 +1,10 @@
-package com.employeeinfo.entity
+package com.employeeinfo
 
 import grails.testing.mixin.integration.Integration
 import grails.transaction.*
-import static grails.web.http.HttpHeaders.*
+
 import static org.springframework.http.HttpStatus.*
-import spock.lang.*
+
 import geb.spock.*
 import grails.plugins.rest.client.RestBuilder
 

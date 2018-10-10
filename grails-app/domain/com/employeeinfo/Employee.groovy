@@ -1,4 +1,4 @@
-package com.employeeinfo.entity
+package com.employeeinfo
 
 class Employee {
 

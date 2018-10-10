@@ -1,4 +1,4 @@
-package com.employeeinfo.entity
+package com.employeeinfo
 
 import spock.lang.*
 import static org.springframework.http.HttpStatus.*

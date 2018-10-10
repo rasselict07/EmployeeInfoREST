@@ -1,4 +1,4 @@
-package com.employeeinfo.entity
+package com.employeeinfo
 
 import grails.testing.mixin.integration.Integration
 import grails.gorm.transactions.Rollback
@@ -16,11 +16,11 @@ class EmployeeServiceSpec extends Specification {
         // TODO: Populate valid domain instances and return a valid ID
         //new Employee(...).save(flush: true, failOnError: true)
         //new Employee(...).save(flush: true, failOnError: true)
-        //Employee employee = new Employee(...).save(flush: true, failOnError: true)
+        //Employee employeeinfo = new Employee(...).save(flush: true, failOnError: true)
         //new Employee(...).save(flush: true, failOnError: true)
         //new Employee(...).save(flush: true, failOnError: true)
         assert false, "TODO: Provide a setupData() implementation for this generated test suite"
-        //employee.id
+        //employeeinfo.id
     }
 
     void "test get"() {
