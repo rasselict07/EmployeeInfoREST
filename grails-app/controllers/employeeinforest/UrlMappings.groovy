@@ -11,6 +11,7 @@ class UrlMappings {
         patch "/$controller/$id(.$format)?"(action: "patch")
 
         "/"(controller: 'application', action: 'index')
+        "/filterByAge/$age(.$format)?"(controller: 'employee', action: 'filterByAge', method: 'GET')
         "500"(view: '/error')
         "404"(view: '/notFound')
     }

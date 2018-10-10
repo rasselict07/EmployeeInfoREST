@@ -174,4 +174,41 @@ class EmployeeController {
         Map successMap = ["success": (employee.fullName + " deleted successfully")]
         render successMap as JSON
     }
+
+
+    def filterByAge(int age) {
+
+        String fileDir = grailsApplication.config.getProperty('app.filedir')
+        def folder = new File(fileDir)
+        if (!folder.exists()) {
+            log.error("Directory not found")
+            return
+        }
+
+        String fileName = grailsApplication.config.getProperty('app.filename')
+        def file = new File(fileDir + SLASH + fileName)
+
+        if (!file.exists()) {
+            log.error("File not exists")
+            return
+        }
+
+        List<Employee> employeeList = []
+        def employeeListJSON = new JsonSlurper().parse(file)
+        for (int i = 0; i < employeeListJSON.size(); i++) {
+            if (age >= employeeListJSON.get(i).age) {
+                Employee employee = new Employee()
+                employee.id = employeeListJSON.get(i).id
+                employee.age = employeeListJSON.get(i).age
+                employee.salary = employeeListJSON.get(i).salary
+                employee.fullName = employeeListJSON.get(i).fullName
+
+                employeeList.add(employee)
+            }
+        }
+
+//        params.max = Math.min(max ?: 10, 100)
+        render employeeList as JSON
+    }
+
 }
