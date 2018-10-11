@@ -15,6 +15,12 @@ class EmployeeController {
     static responseFormats = ['json', 'xml']
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    /**
+     * Get all employee list
+     *
+     * @param max
+     * @return employee list as JSON formatted
+     */
     def index(Integer max) {
 
         String fileDir = grailsApplication.config.getProperty('app.filedir')
@@ -48,6 +54,12 @@ class EmployeeController {
         render employeeListJSON as JSON
     }
 
+    /**
+     * Get employee by id
+     *
+     * @param id
+     * @return employee object as JSON
+     */
     def show(Long id) {
 
         String fileDir = grailsApplication.config.getProperty('app.filedir')
@@ -71,6 +83,11 @@ class EmployeeController {
         render employee as JSON
     }
 
+    /**
+     * Save an employee to JSON file
+     *
+     * @return saved employee info as JSON
+     */
     def save() {
         Employee employee = new Employee()
         try {
@@ -105,6 +122,11 @@ class EmployeeController {
         render employee as JSON
     }
 
+    /**
+     * Update and employee information by id and new infor
+     *
+     * @return updated employee as JSON
+     */
     def update() {
         Employee employee = new Employee()
         try {
@@ -142,6 +164,12 @@ class EmployeeController {
         render employee as JSON
     }
 
+    /**
+     * Delete and employee by id
+     *
+     * @param id
+     * @return success message of deleted employee
+     */
     def delete(Long id) {
         String fileDir = grailsApplication.config.getProperty('app.filedir')
         String fileName = grailsApplication.config.getProperty('app.filename')
@@ -175,7 +203,12 @@ class EmployeeController {
         render successMap as JSON
     }
 
-
+    /**
+     * Filter employee by age
+     *
+     * @param age
+     * @return Employee list as JSON formatted
+     */
     def filterByAge(int age) {
 
         String fileDir = grailsApplication.config.getProperty('app.filedir')
