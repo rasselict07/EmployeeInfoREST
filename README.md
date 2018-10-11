@@ -16,3 +16,24 @@ double salary
 ```
 
 All data will store, add or update in defined JSON file in local system.
+
+####This are the api list:
+
+```
+For getting all
+http://localhost:8080/employee >> Method type GET
+
+Get employee info by id
+http://localhost:8080/employee/1  >> Method type GET
+
+Create employee with form data
+http://localhost:8080/employee  >>Method type POST
+
+Delete employee by id
+http://localhost:8080/employee/10  >> Method type DELETE
+
+Search employee by age less than or equal
+http://localhost:8080/filterByAge/5 >> Method type GET
+```
+
+Thanks to all
